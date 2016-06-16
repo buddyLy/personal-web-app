@@ -1,0 +1,24 @@
+<h1> These are my directives </h1>
+<div data-my-dom-directive>Click Me!</div>
+
+<div data-my-shared-scope></div>
+
+<button ng-click="addCustomer">add customer</button>
+<button ng-click="changeData">change data</button>
+
+<hr />
+<p> custom on change </p>
+<input type="file" ng-model="bankfilepath" custom-on-change="uploadFile"/>
+<input type="file" enable-button onchange="alert('changing')"/> 
+<!--
+<input type="file" ng-model="bankfilepath2"/>
+<input type="file" onchange="angular.element(this).scope().file_changed(this)" ng-model="bankfilepath" />
+-->
+<button ng-disabled="isDisabled">submit</button>
+<button ng-click="enablebutton()">enabled button </button>
+<button custom-on-change="uploadFile">enabled button2 </button>
+{{vm.isDisabled}}
+<hr />
+bank file path:
+{{bankfilepath2}}
+{{bankfilepath}}

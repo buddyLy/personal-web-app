@@ -1,0 +1,6 @@
+* Have a main module that ties together all submodules
+* Have a layout to tie together all the pages.
+* The layout will contain a shell.html which has various layout components
+* Each module may contain many views
+* Define the route to each view in the same location where the module is defined
+* Routes are what wired the views to it's controllers 

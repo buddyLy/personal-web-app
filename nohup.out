@@ -1,0 +1,15 @@
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::8081
+    at Object.exports._errnoException (util.js:896:11)
+    at exports._exceptionWithHostPort (util.js:919:20)
+    at Server._listen2 (net.js:1246:14)
+    at listen (net.js:1282:10)
+    at Server.listen (net.js:1378:5)
+    at EventEmitter.app.listen (/Users/lcle/git/mygit/personal-web-app/node_modules/express/lib/application.js:559:24)
+    at Object.<anonymous> (/Users/lcle/git/mygit/personal-web-app/server.js:6:5)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:456:32)

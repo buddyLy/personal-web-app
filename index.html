@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="MyApp" ng-strict-di>
+	<head>
+		<meta charset="utf-8" />
+		<!--<link href="content/bootstrap.css" rel="stylesheet" />-->
+		<!-- Bootstrap CSS -->
+	    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+		<!--<link href="scripts/main.css" rel="stylesheet" />-->
+	</head>
+
+	<body>
+		<!-- third party lib -->
+		<script src="scripts/angular/angular.js"> </script>
+		<script src="scripts/angular-route/angular-route.js"> </script>
+		<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+		<!--<script src="scripts/bootstrap.js"> </script>-->
+
+		<!-- myApp lib -->
+		<script src="app/app.module.js"></script>
+		<script src="app/directives/directives.module.js"></script>
+		<script src="app/services/services.module.js"></script>
+		<script src="app/layout/layout.module.js"></script>
+		<script src="app/main/main.module.js"></script>
+		<script src="app/core/core.module.js"></script>
+		<script src="app/core/route.module.js"></script>
+		<script src="app/core/routeHelper.js"></script>
+		<script src="app/core/config.route.js"></script>
+		<script src="app/core/config.js"></script>
+		<script src="app/layout/shell.controller.js"></script>
+		<script src="app/main/home/home.controller.js"></script>
+		<script src="app/main/feature1/feature1.controller.js"></script>
+		<script src="app/main/feature2/feature2.controller.js"></script>
+		<script src="app/main/ui_router/uirouter.controller.js"></script>
+		<script src="app/main/localstorage.controller.js"></script>		
+		<script src="app/directives/myapp.directive.js"></script>
+		<script src="app/directives/directive.controller.js"></script>
+		<div>
+			<div data-ng-include="'app/layout/shell.html'"></div>
+		</div>
+	</body>
+
+</html>

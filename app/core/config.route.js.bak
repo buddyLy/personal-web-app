@@ -1,0 +1,80 @@
+(function(){
+	'use strict';
+	angular
+		.module('MyApp.main')
+		.run(appRun);
+
+	appRun.$inject = ['routeHelper'];
+
+	function appRun(routeHelper){
+		var myRoutes = getRoutes;
+
+		//add routes to ng router
+		routeHelper.configureRoutes(myRoutes());	
+		
+		//call states to ui router
+		routeHelper.configureStates();
+	}
+
+	function getRoutes(){
+		var myRoutes = [
+			{
+				url: '/main/directives',
+				config: {
+					templateUrl: 'app/main/directives.html',
+					controller: 'CustomersController',
+					controllerAs: 'vm'
+				}
+			},
+			{
+				url: '/',
+				config: {
+					templateUrl: 'app/main/home/home.html',
+					controller: 'home',
+					controllerAs: 'vm'
+				}
+			},
+			{
+				url: '/main/localstorage',
+				config: {
+					templateUrl: 'app/main/localstorage.html',
+					controller: 'localstorageFeature',
+					controllerAs: 'vm'
+				}
+			},
+			{
+				url: '/main/feature1',
+				config: {
+					templateUrl: 'app/main/feature1/feature1.html',
+					controller: 'feature1',
+					controllerAs: 'vm'
+				}
+			},
+			{
+				url: '/main/feature2',
+				config: {
+					templateUrl: 'app/main/feature2/feature2.html',
+					controller: 'feature2',
+					controllerAs: 'vm'
+				}
+			},
+			{
+				url: '/main/ui_router',
+				config: {
+					templateUrl: 'app/main/ui_router/uirouter.html',
+					controller: 'uirouter',
+					controllerAs: 'vm'
+				}
+			},
+			{
+				url: '/main/ui_router/ui_router_views',
+				config: {
+					templateUrl: 'app/main/ui_router/ui_router_views/nestedviews.html',
+				}
+			}
+		];	
+		
+		return myRoutes;
+	}
+
+})();
